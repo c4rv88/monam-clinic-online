@@ -17,7 +17,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-taupe backdrop-blur-md border-b border-taupe">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-[hsl(28,28%,38%)] via-taupe to-taupe backdrop-blur-md border-b border-taupe">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src={logoHeader} alt="Monamê Clinic" className="h-14 w-auto" />
@@ -63,7 +63,7 @@ const Header = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-taupe border-b border-taupe"
+            className="md:hidden overflow-hidden bg-gradient-to-r from-[hsl(28,28%,38%)] via-taupe to-taupe border-b border-taupe"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navItems.map((item) => (
