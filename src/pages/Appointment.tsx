@@ -55,7 +55,7 @@ const Appointment = () => {
         >
           <div className="bg-card rounded-2xl p-8 border border-border shadow-sm">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-full bg-rose-light flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-gold-light flex items-center justify-center">
                 <CalendarDays size={22} className="text-primary" />
               </div>
               <div>

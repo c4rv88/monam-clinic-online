@@ -60,7 +60,7 @@ const Team = () => {
               custom={i}
               className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm text-center"
             >
-              <div className="h-48 bg-gradient-to-br from-rose-light to-accent flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center">
                 <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
                   <span className="font-display text-3xl font-bold text-primary">
                     {member.name.charAt(0)}

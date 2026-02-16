@@ -50,7 +50,7 @@ const Contact = () => {
                 href="tel:+5585988628871"
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-rose-light flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gold-light flex items-center justify-center">
                   <Phone size={20} className="text-primary" />
                 </div>
                 <div>
@@ -62,7 +62,7 @@ const Contact = () => {
                 href="mailto:monameclinic@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-rose-light flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gold-light flex items-center justify-center">
                   <Mail size={20} className="text-primary" />
                 </div>
                 <div>
@@ -76,7 +76,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-rose-light flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gold-light flex items-center justify-center">
                   <Instagram size={20} className="text-primary" />
                 </div>
                 <div>
@@ -85,7 +85,7 @@ const Contact = () => {
                 </div>
               </a>
               <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
-                <div className="w-12 h-12 rounded-full bg-rose-light flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gold-light flex items-center justify-center">
                   <MapPin size={20} className="text-primary" />
                 </div>
                 <div>

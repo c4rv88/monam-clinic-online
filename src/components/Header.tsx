@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.jpg";
 
 const navItems = [
   { label: "Início", path: "/" },
@@ -17,14 +18,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-bold text-primary tracking-wide">
-            MONAMÊ
-          </span>
-          <span className="font-body text-xs text-muted-foreground tracking-widest uppercase">
-            Clinic
-          </span>
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Monamê Clinic" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop nav */}
