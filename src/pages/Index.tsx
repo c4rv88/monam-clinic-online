@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Sparkles, Heart, Flower2, Bath, Star } from "lucide-react";
-import heroBg from "@/assets/hero-bg.png";
+
 
 const serviceHighlights = [
   { icon: Sparkles, title: "Estética Facial", desc: "Limpeza, revitalização, peelings e muito mais", path: "/servicos" },
@@ -31,7 +31,14 @@ const Index = () => {
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-80"
+          src="/videos/hero-video.mp4"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-taupe-light/80 via-background/70 to-accent/60" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
