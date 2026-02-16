@@ -1,28 +1,32 @@
 
 
-# Corrigir diferenca de cor entre logo e header
+# Adicionar imagem ao Hero com transparencia
 
-## Problema
-A imagem da logo tem um fundo marrom ligeiramente diferente do fundo do header (`bg-taupe`), criando uma transicao visivel e pouco profissional.
+## O que sera feito
 
-## Solucao
-Aplicar um **degradê suave** no header que combine com o tom da logo, eliminando a diferenca visual. O degradê ira do tom mais escuro da logo (esquerda/centro) para o tom do taupe (direita), criando uma transicao natural.
-
-Alternativa mais simples: ajustar a cor `--taupe` no CSS para corresponder exatamente ao fundo da logo.
-
-## Abordagem escolhida
-Combinar as duas estrategias:
-1. Ajustar a variavel `--taupe` para corresponder melhor ao tom da logo (um marrom mais quente, menos acinzentado)
-2. Usar um degradê sutil no header para suavizar qualquer diferenca residual entre a imagem e o fundo
+Usar a imagem enviada (mulher com pele bonita) como imagem de fundo/destaque na secao Hero da pagina inicial, com efeito de transparencia para que o texto continue legivel sobre ela.
 
 ## Alteracoes
 
-### `src/index.css`
-- Ajustar `--taupe` de `25 25% 45%` para algo mais proximo do tom da logo (~`28 30% 42%`), um marrom mais quente e levemente mais escuro
+### 1. Copiar imagem
+- Salvar `envato-labs-image-edit_1.png` em `src/assets/hero-bg.png`
 
-### `src/components/Header.tsx`
-- Trocar `bg-taupe` por um gradiente inline que vai de um marrom um pouco mais escuro (tom da logo) para o taupe, tipo:
-  `bg-gradient-to-r from-[hsl(28,28%,38%)] via-taupe to-taupe`
-- Aplicar o mesmo degradê ao menu mobile
+### 2. Atualizar Hero (`src/pages/Index.tsx`)
+- Adicionar a imagem como background da secao hero usando uma tag `<img>` com `opacity` reduzida (aprox. 30-40%) ou como `background-image` com overlay
+- Posicionar a imagem no lado esquerdo (onde a mulher aparece) com o texto no lado direito, ou como fundo completo com overlay semi-transparente
+- Manter o gradiente atual como overlay por cima da imagem para garantir legibilidade do texto
+- Layout sugerido: imagem posicionada com `absolute`, `object-cover`, e opacidade controlada via classe Tailwind (`opacity-30` ou similar)
 
-Isso fara o header parecer um fundo unico e continuo junto com a logo.
+### Estrutura do Hero atualizada
+```
+<section> (relative, min-h-[90vh])
+  <img src={heroBg} /> (absolute, inset-0, object-cover, opacity-30~40)
+  <div overlay gradiente /> (absolute, para escurecer/suavizar)
+  <div conteudo texto /> (relative z-10, texto e botoes)
+</section>
+```
+
+### Arquivos alterados
+- `src/assets/hero-bg.png` — imagem copiada
+- `src/pages/Index.tsx` — hero section com imagem de fundo transparente
+
