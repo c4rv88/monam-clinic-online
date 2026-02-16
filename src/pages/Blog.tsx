@@ -56,7 +56,7 @@ const Blog = () => {
               custom={i}
               className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm group cursor-pointer"
             >
-              <div className="h-48 bg-gradient-to-br from-rose-light to-accent flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center">
                 <BookOpen size={40} className="text-primary/40" />
               </div>
               <div className="p-6">

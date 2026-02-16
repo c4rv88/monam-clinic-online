@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-xl font-bold text-primary mb-3">
-              MONAMÊ <span className="text-muted-foreground font-body text-xs tracking-widest">CLINIC</span>
-            </h3>
+            <img src={logo} alt="Monamê Clinic" className="h-16 w-auto mb-3" />
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               Há 25 anos levando tecnologia e cuidado personalizado em cada tratamento.
             </p>
@@ -46,26 +45,15 @@ const Footer = () => {
               Contato
             </h4>
             <div className="flex flex-col gap-3">
-              <a
-                href="tel:+5585988628871"
-                className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
+              <a href="tel:+5585988628871" className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone size={16} />
                 (85) 98862-8871
               </a>
-              <a
-                href="mailto:monameclinic@gmail.com"
-                className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
+              <a href="mailto:monameclinic@gmail.com" className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={16} />
                 monameclinic@gmail.com
               </a>
-              <a
-                href="https://instagram.com/monameclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
+              <a href="https://instagram.com/monameclinic" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={16} />
                 @monameclinic
               </a>

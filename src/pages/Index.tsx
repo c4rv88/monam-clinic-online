@@ -29,8 +29,8 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-rose-light via-background to-accent">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--rose)/0.15),transparent_60%)]" />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-taupe-light via-background to-accent">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--gold)/0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -97,7 +97,7 @@ const Index = () => {
                   to={service.path}
                   className="block bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-border group"
                 >
-                  <div className="w-14 h-14 rounded-full bg-rose-light flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="w-14 h-14 rounded-full bg-gold-light flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <service.icon size={24} className="text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
                   <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
@@ -176,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 via-rose-light to-accent">
+      <section className="py-20 bg-gradient-to-r from-primary/10 via-taupe-light to-accent">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
