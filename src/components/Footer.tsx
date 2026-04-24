@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo-branco.png";
+import logo from "@/assets/logo-moname.png";
 
 const Footer = () => {
   return (
@@ -15,10 +15,20 @@ const Footer = () => {
               aria-label="Voltar ao início"
               className="inline-block"
             >
-              <img
-                src={logo}
-                alt="Monamê Clinic"
-                className="h-14 w-auto mb-4 brightness-0 opacity-70 hover:opacity-100 transition-opacity"
+              <div
+                aria-label="Monamê Clinic"
+                className="h-20 w-48 mb-4 opacity-80 hover:opacity-100 transition-opacity"
+                style={{
+                  backgroundColor: "hsl(var(--primary))",
+                  WebkitMaskImage: `url(${logo})`,
+                  maskImage: `url(${logo})`,
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskSize: "contain",
+                  maskSize: "contain",
+                  WebkitMaskPosition: "left center",
+                  maskPosition: "left center",
+                }}
               />
             </Link>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
