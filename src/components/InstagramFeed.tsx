@@ -76,15 +76,15 @@ const InstagramFeed = () => {
         <div ref={containerRef} className="px-4 md:px-12">
           <Carousel
             opts={{ align: "start", loop: true }}
-            className="w-full max-w-6xl mx-auto"
+            className="w-full max-w-5xl mx-auto"
           >
             <CarouselContent className="items-start">
               {posts.map((url) => (
                 <CarouselItem
                   key={url}
-                  className="basis-full md:basis-1/2 lg:basis-1/3"
+                  className="basis-full md:basis-1/3 lg:basis-1/4"
                 >
-                  <div className="rounded-xl overflow-hidden bg-background shadow-sm border border-border/60 min-h-[380px]">
+                  <div className="rounded-xl overflow-hidden bg-background border border-border/40 min-h-[340px]">
                     <blockquote
                       className="instagram-media"
                       data-instgrm-permalink={url}
