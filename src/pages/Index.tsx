@@ -39,7 +39,7 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-80"
           src="/videos/hero-video.mp4"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-taupe-light/80 via-background/70 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-taupe/70 via-taupe/50 to-taupe/60" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
