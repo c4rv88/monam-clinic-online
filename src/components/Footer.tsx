@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Monamê Clinic"
-              className="h-16 w-auto mb-3 brightness-0 opacity-70"
+              className="h-14 w-auto mb-4 brightness-0 opacity-70"
             />
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               Há 25 anos levando tecnologia e cuidado personalizado em cada tratamento.
