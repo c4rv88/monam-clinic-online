@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-branco.png";
 
 const Footer = () => {
   return (

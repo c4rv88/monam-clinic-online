@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoHeader from "@/assets/logo-header.png";
+import logoHeader from "@/assets/logo-branco.png";
 
 const navItems = [
   { label: "Início", path: "/" },
