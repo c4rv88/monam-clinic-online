@@ -185,8 +185,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Instagram Feed */}
-      <InstagramFeed />
+      {/* Instagram Feed - oculto temporariamente até ter imagens corretas */}
+      {/* <InstagramFeed /> */}
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-primary/10 via-taupe-light to-accent">
