@@ -39,7 +39,7 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-80"
           src="/videos/hero-video.mp4"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-taupe-light/80 via-background/70 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-taupe/70 via-taupe/50 to-taupe/60" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -47,14 +47,14 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-block font-body text-sm tracking-[0.3em] text-primary uppercase mb-4">
+            <span className="inline-block font-body text-sm tracking-[0.3em] text-cream uppercase mb-4 drop-shadow-md">
               Há 25 anos cuidando de você
             </span>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-cream leading-tight mb-6 drop-shadow-lg">
               Sua beleza merece{" "}
-              <span className="text-primary italic">cuidado especial</span>
+              <span className="text-gold italic">cuidado especial</span>
             </h1>
-            <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-cream/90 mb-8 max-w-xl mx-auto leading-relaxed drop-shadow-md">
               Tecnologia avançada e atendimento personalizado para realçar a sua beleza natural com segurança e carinho.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -66,7 +66,7 @@ const Index = () => {
               </Link>
               <Link
                 to="/servicos"
-                className="border-2 border-primary text-primary px-8 py-4 rounded-full font-medium text-base hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="border-2 border-cream text-cream px-8 py-4 rounded-full font-medium text-base hover:bg-cream hover:text-taupe transition-colors"
               >
                 Nossos Serviços
               </Link>
