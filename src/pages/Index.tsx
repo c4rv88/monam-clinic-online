@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Sparkles, Heart, Flower2, Bath, Star } from "lucide-react";
+import InstagramFeed from "@/components/InstagramFeed";
 
 
 const serviceHighlights = [
@@ -183,6 +184,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed */}
+      <InstagramFeed />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-primary/10 via-taupe-light to-accent">
