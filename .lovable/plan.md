@@ -1,41 +1,46 @@
-
-
-# Adicionar video no Hero com transparencia
+# Alterar cores do texto do Hero
 
 ## O que sera feito
 
-Substituir a imagem de fundo do Hero por o video enviado (procedimento estetico facial), com uma leve transparencia para manter a legibilidade do texto.
+Mudar as cores dos textos do Hero (titulo, subtitulo, paragrafo e botoes) de preto/escuro para tons claros que combinem com a identidade visual e tenham bom contraste sobre o video de fundo.
+
+## Identidade visual atual
+- Taupe (marrom elegante)
+- Dourado/ouro
+- Creme/bege claro
+- Estetica suave e feminina
 
 ## Alteracoes
 
-### 1. Copiar video
-- Salvar `Vídeo_de_Procedimento_Estético_Facial_1.mp4` em `public/videos/hero-video.mp4` (pasta public pois videos grandes nao devem passar pelo bundler do Vite)
+### `src/pages/Index.tsx` - Secao Hero
 
-### 2. Atualizar Hero (`src/pages/Index.tsx`)
-- Remover o import da imagem `hero-bg.png`
-- Substituir a tag `<img>` por um elemento `<video>` com as seguintes propriedades:
-  - `autoPlay`, `muted`, `loop`, `playsInline` para reproducao automatica e silenciosa
-  - Classes: `absolute inset-0 w-full h-full object-cover opacity-80` (transparencia leve de 20%)
-  - `src="/videos/hero-video.mp4"`
-- Manter o overlay gradiente existente por cima do video para garantir contraste do texto
+**Mudancas de cor no conteudo do Hero:**
 
-### Codigo resultante (trecho do Hero)
-```tsx
-<section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover opacity-80"
-    src="/videos/hero-video.mp4"
-  />
-  <div className="absolute inset-0 bg-gradient-to-br from-taupe-light/80 via-background/70 to-accent/60" />
-  <!-- resto do conteudo igual -->
-</section>
-```
+1. **Subtitulo** ("Ha 25 anos cuidando de voce"):
+   - De: `text-primary` 
+   - Para: `text-white/90` ou `text-cream` (tom claro)
 
-### Arquivos alterados
-- `public/videos/hero-video.mp4` -- video copiado
-- `src/pages/Index.tsx` -- video no lugar da imagem, com opacity-80
+2. **Titulo principal** ("Sua beleza merece cuidado especial"):
+   - De: `text-foreground` (preto/escuro)
+   - Para: `text-white` (branco puro para maximo contraste)
 
+3. **Span em italico** ("cuidado especial"):
+   - De: `text-primary` (marrom)
+   - Para: `text-gold` ou `text-amber-300` (dourado brilhante)
+
+4. **Paragrafo descritivo**:
+   - De: `text-muted-foreground` (cinza escuro)
+   - Para: `text-white/80` (branco com transparencia)
+
+5. **Botoes**:
+   - Botao primario "Agendar Consulta": manter como esta (ja tem bom contraste)
+   - Botao secundario "Nossos Servicos": ajustar para `border-white text-white hover:bg-white hover:text-taupe` para combinar com o tema claro
+
+### Resultado visual
+- Textos todos em tons claros (branco, creme, dourado)
+- Alto contraste sobre o video de fundo
+- Mantem a identidade visual elegante e feminina
+- Botoes com hover states apropriados para fundo escuro/video
+
+## Arquivos alterados
+- `src/pages/Index.tsx` — cores dos textos do Hero atualizadas
