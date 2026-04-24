@@ -13,19 +13,9 @@ const team = [
     desc: "Especialista em estética facial e corporal com anos de experiência em tratamentos avançados.",
   },
   {
-    name: "Gilson Farias",
-    role: "Nutricionista",
-    desc: "Profissional dedicado à nutrição personalizada para potencializar os resultados estéticos.",
-  },
-  {
     name: "Dra. Bianca Bezerra",
     role: "Nutróloga",
     desc: "Médica nutróloga focada em saúde e bem-estar integrados aos cuidados estéticos.",
-  },
-  {
-    name: "Barbara Joyce",
-    role: "Biomédica",
-    desc: "Biomédica esteta especializada em procedimentos de alta tecnologia e segurança.",
   },
 ];
 
