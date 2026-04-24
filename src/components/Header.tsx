@@ -19,7 +19,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-[hsl(28,28%,38%)] via-taupe to-taupe backdrop-blur-md border-b border-taupe">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Monamê Clinic — voltar ao início"
+          className="flex items-center"
+        >
           <img src={logoHeader} alt="Monamê Clinic" className="h-14 w-auto" />
         </Link>
 

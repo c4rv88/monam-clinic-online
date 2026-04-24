@@ -9,11 +9,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <img
-              src={logo}
-              alt="Monamê Clinic"
-              className="h-14 w-auto mb-4 brightness-0 opacity-70"
-            />
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Voltar ao início"
+              className="inline-block"
+            >
+              <img
+                src={logo}
+                alt="Monamê Clinic"
+                className="h-14 w-auto mb-4 brightness-0 opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </Link>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               Há 25 anos levando tecnologia e cuidado personalizado em cada tratamento.
             </p>
