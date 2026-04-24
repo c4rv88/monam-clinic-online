@@ -84,7 +84,7 @@ const InstagramFeed = () => {
                   key={url}
                   className="basis-full md:basis-1/2 lg:basis-1/3"
                 >
-                  <div className="rounded-2xl overflow-hidden bg-background shadow-sm border border-border min-h-[500px]">
+                  <div className="rounded-xl overflow-hidden bg-background shadow-sm border border-border/60 min-h-[380px]">
                     <blockquote
                       className="instagram-media"
                       data-instgrm-permalink={url}
@@ -102,7 +102,7 @@ const InstagramFeed = () => {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-6 text-center font-body text-sm text-primary"
+                        className="block p-4 text-center font-body text-sm text-primary"
                       >
                         Ver post no Instagram
                       </a>
