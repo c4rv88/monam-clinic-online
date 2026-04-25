@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Sparkles, Heart, Flower2, Bath, Star } from "lucide-react";
+import { Sparkles, Heart, Flower2, Leaf, Star } from "lucide-react";
 import InstagramFeed from "@/components/InstagramFeed";
 import esteticaCorporalImg from "@/assets/estetica-corporal.webp";
 import esteticaFacialImg from "@/assets/estetica-facial.webp";
 import esteticaIntimaImg from "@/assets/estetica-intima.webp";
+import esteticaRegenerativaImg from "@/assets/estetica-regenerativa.webp";
 
 type ServiceHighlight = {
   icon: typeof Sparkles;
