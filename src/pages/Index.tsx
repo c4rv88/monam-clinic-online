@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Sparkles, Heart, Flower2, Leaf, Star } from "lucide-react";
+import { Sparkles, Heart, Flower2, Leaf, Star, FlaskConical } from "lucide-react";
 import InstagramFeed from "@/components/InstagramFeed";
 import esteticaCorporalImg from "@/assets/estetica-corporal.webp";
 import esteticaFacialImg from "@/assets/estetica-facial.webp";
 import esteticaIntimaImg from "@/assets/estetica-intima.webp";
 import esteticaRegenerativaImg from "@/assets/estetica-regenerativa.webp";
+import esteticaOrtomolecularImg from "@/assets/estetica-ortomolecular.webp";
 
 type ServiceHighlight = {
   icon: typeof Sparkles;
@@ -20,7 +21,7 @@ const serviceHighlights: ServiceHighlight[] = [
   { icon: Heart, title: "Estética Corporal", desc: "Tratamentos para flacidez, gordura e celulite", path: "/servicos", image: esteticaCorporalImg },
   { icon: Flower2, title: "Estética Íntima", desc: "Gino Skin — cuidado especializado", path: "/servicos", image: esteticaIntimaImg },
   { icon: Leaf, title: "Estética Regenerativa", desc: "Tratamentos para renovação e rejuvenescimento", path: "/servicos", image: esteticaRegenerativaImg },
-  { icon: Star, title: "Intensive Op Viê", desc: "Jornada completa da cirurgia plástica", path: "/servicos" },
+  { icon: FlaskConical, title: "Estética Ortomolecular", desc: "Equilíbrio e saúde de dentro para fora", path: "/servicos", image: esteticaOrtomolecularImg },
 ];
 
 const testimonials = [
