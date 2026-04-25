@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import oliviaLucenaImg from "@/assets/olivia-lucena.webp";
+import biancaBezerraImg from "@/assets/bianca-bezerra.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -24,6 +25,7 @@ const team: TeamMember[] = [
     name: "Dra. Bianca Bezerra",
     role: "Nutróloga",
     desc: "Médica nutróloga focada em saúde e bem-estar integrados aos cuidados estéticos.",
+    image: biancaBezerraImg,
   },
   {
     name: "Olívia Lucena",
