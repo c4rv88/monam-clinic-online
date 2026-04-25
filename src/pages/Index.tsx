@@ -19,7 +19,7 @@ const serviceHighlights: ServiceHighlight[] = [
   { icon: Sparkles, title: "Estética Facial", desc: "Limpeza, revitalização, peelings e muito mais", path: "/servicos", image: esteticaFacialImg },
   { icon: Heart, title: "Estética Corporal", desc: "Tratamentos para flacidez, gordura e celulite", path: "/servicos", image: esteticaCorporalImg },
   { icon: Flower2, title: "Estética Íntima", desc: "Gino Skin — cuidado especializado", path: "/servicos", image: esteticaIntimaImg },
-  { icon: Bath, title: "SPA Terapy", desc: "Massagens, banhos e relaxamento", path: "/servicos" },
+  { icon: Leaf, title: "Estética Regenerativa", desc: "Tratamentos para renovação e rejuvenescimento", path: "/servicos", image: esteticaRegenerativaImg },
   { icon: Star, title: "Intensive Op Viê", desc: "Jornada completa da cirurgia plástica", path: "/servicos" },
 ];
 
