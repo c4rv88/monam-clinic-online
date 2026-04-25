@@ -2,11 +2,19 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Sparkles, Heart, Flower2, Bath, Star } from "lucide-react";
 import InstagramFeed from "@/components/InstagramFeed";
+import esteticaCorporalImg from "@/assets/estetica-corporal.webp";
 
+type ServiceHighlight = {
+  icon: typeof Sparkles;
+  title: string;
+  desc: string;
+  path: string;
+  image?: string;
+};
 
-const serviceHighlights = [
+const serviceHighlights: ServiceHighlight[] = [
   { icon: Sparkles, title: "Estética Facial", desc: "Limpeza, revitalização, peelings e muito mais", path: "/servicos" },
-  { icon: Heart, title: "Estética Corporal", desc: "Tratamentos para flacidez, gordura e celulite", path: "/servicos" },
+  { icon: Heart, title: "Estética Corporal", desc: "Tratamentos para flacidez, gordura e celulite", path: "/servicos", image: esteticaCorporalImg },
   { icon: Flower2, title: "Estética Íntima", desc: "Gino Skin — cuidado especializado", path: "/servicos" },
   { icon: Bath, title: "SPA Terapy", desc: "Massagens, banhos e relaxamento", path: "/servicos" },
   { icon: Star, title: "Intensive Op Viê", desc: "Jornada completa da cirurgia plástica", path: "/servicos" },
@@ -105,13 +113,26 @@ const Index = () => {
               >
                 <Link
                   to={service.path}
-                  className="block bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-border group"
+                  className="block bg-card rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow border border-border group overflow-hidden"
                 >
-                  <div className="w-14 h-14 rounded-full bg-gold-light flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <service.icon size={24} className="text-primary group-hover:text-primary-foreground transition-colors" />
+                  {service.image ? (
+                    <div className="w-full h-32 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-14 h-14 rounded-full bg-gold-light flex items-center justify-center mx-auto mt-6 mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <service.icon size={24} className="text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                  )}
+                  <div className="p-6 pt-4">
+                    <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
+                    <p className="font-body text-xs text-muted-foreground">{service.desc}</p>
                   </div>
-                  <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
-                  <p className="font-body text-xs text-muted-foreground">{service.desc}</p>
                 </Link>
               </motion.div>
             ))}
