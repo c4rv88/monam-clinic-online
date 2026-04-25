@@ -4,6 +4,7 @@ import { Sparkles, Heart, Flower2, Bath, Star } from "lucide-react";
 import InstagramFeed from "@/components/InstagramFeed";
 import esteticaCorporalImg from "@/assets/estetica-corporal.webp";
 import esteticaFacialImg from "@/assets/estetica-facial.webp";
+import esteticaIntimaImg from "@/assets/estetica-intima.webp";
 
 type ServiceHighlight = {
   icon: typeof Sparkles;
@@ -16,7 +17,7 @@ type ServiceHighlight = {
 const serviceHighlights: ServiceHighlight[] = [
   { icon: Sparkles, title: "Estética Facial", desc: "Limpeza, revitalização, peelings e muito mais", path: "/servicos", image: esteticaFacialImg },
   { icon: Heart, title: "Estética Corporal", desc: "Tratamentos para flacidez, gordura e celulite", path: "/servicos", image: esteticaCorporalImg },
-  { icon: Flower2, title: "Estética Íntima", desc: "Gino Skin — cuidado especializado", path: "/servicos" },
+  { icon: Flower2, title: "Estética Íntima", desc: "Gino Skin — cuidado especializado", path: "/servicos", image: esteticaIntimaImg },
   { icon: Bath, title: "SPA Terapy", desc: "Massagens, banhos e relaxamento", path: "/servicos" },
   { icon: Star, title: "Intensive Op Viê", desc: "Jornada completa da cirurgia plástica", path: "/servicos" },
 ];
