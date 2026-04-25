@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import oliviaLucenaImg from "@/assets/olivia-lucena.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.15, duration: 0.5 } }),
 };
 
-const team = [
+type TeamMember = {
+  name: string;
+  role: string;
+  desc: string;
+  image?: string;
+};
+
+const team: TeamMember[] = [
   {
     name: "Alexandra Azevedo",
     role: "Esteticista",
@@ -16,6 +24,12 @@ const team = [
     name: "Dra. Bianca Bezerra",
     role: "Nutróloga",
     desc: "Médica nutróloga focada em saúde e bem-estar integrados aos cuidados estéticos.",
+  },
+  {
+    name: "Olívia Lucena",
+    role: "Fisioterapia Dermato Funcional",
+    desc: "Especialista em estética regenerativa, injetáveis e ozonioterapia.",
+    image: oliviaLucenaImg,
   },
 ];
 
@@ -50,12 +64,21 @@ const Team = () => {
               custom={i}
               className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm text-center"
             >
-              <div className="h-48 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="font-display text-3xl font-bold text-primary">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
+              <div className="h-64 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center overflow-hidden">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-display text-3xl font-bold text-primary">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
