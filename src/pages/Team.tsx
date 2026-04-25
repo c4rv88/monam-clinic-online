@@ -64,12 +64,21 @@ const Team = () => {
               custom={i}
               className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm text-center"
             >
-              <div className="h-48 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="font-display text-3xl font-bold text-primary">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
+              <div className="h-64 bg-gradient-to-br from-taupe-light to-gold-light flex items-center justify-center overflow-hidden">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-display text-3xl font-bold text-primary">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
