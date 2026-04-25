@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import oliviaLucenaImg from "@/assets/olivia-lucena.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.15, duration: 0.5 } }),
 };
 
-const team = [
+type TeamMember = {
+  name: string;
+  role: string;
+  desc: string;
+  image?: string;
+};
+
+const team: TeamMember[] = [
   {
     name: "Alexandra Azevedo",
     role: "Esteticista",
@@ -16,6 +24,12 @@ const team = [
     name: "Dra. Bianca Bezerra",
     role: "Nutróloga",
     desc: "Médica nutróloga focada em saúde e bem-estar integrados aos cuidados estéticos.",
+  },
+  {
+    name: "Olívia Lucena",
+    role: "Fisioterapia Dermato Funcional",
+    desc: "Especialista em estética regenerativa, injetáveis e ozonioterapia.",
+    image: oliviaLucenaImg,
   },
 ];
 
